@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.safari {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  background: #333333;
+}
+
+body.font-loaded {
+  font-family: "Montserrat";
+}
+
+img {
+  pointer-events: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
