@@ -1,6 +1,6 @@
 import React, { FC, ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import thema from 'theme';
+import theme from 'theme';
 
 const DefaultButton = styled.button`
   font-family: Montserrat;
@@ -17,34 +17,34 @@ const DefaultButton = styled.button`
   border: none;
   outline: 0;
   cursor: pointer;
-  background: ${thema.color.primary.Black};
-  color: ${thema.color.primary.White};
+  background: ${theme.color.primary.Black};
+  color: ${theme.color.primary.White};
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
   img {
     margin-right: 10px;
   }
   &:hover {
-    background: ${thema.color.primary.Violet};
-    color: ${thema.color.primary.White};
+    background: ${theme.color.primary.Violet};
+    color: ${theme.color.primary.White};
   }
 
   &:active {
-    background: ${thema.color.primary.DarkViolet};
-    color: ${thema.color.primary.White};
+    background: ${theme.color.primary.DarkViolet};
+    color: ${theme.color.primary.White};
   }
 
   /** 비활성 상태일 때의 스타일 */
   &:disabled {
-    background: ${thema.color.primary.Black};
-    color: ${thema.color.primary.White};
+    background: ${theme.color.primary.Black};
+    color: ${theme.color.primary.White};
     opacity: 0.2;
   }
 `;
 
 const RectangleButton = styled(DefaultButton)`
-  background: ${thema.color.primary.Gray};
-  border: 1px solid ${thema.color.primary.White};
+  background: ${theme.color.primary.Gray};
+  border: 1px solid ${theme.color.primary.White};
   border-radius: 10px;
 `;
 
