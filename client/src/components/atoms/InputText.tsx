@@ -19,7 +19,7 @@ const InputContainer = styled.input`
   padding: 10px;
   color: ${theme.color.primary.White};
   background-color: rgba(80, 80, 80, 0.2);
-  width: 720px;
+  width: 100%;
   height: 48px;
   border: none;
   border-radius: 8px;

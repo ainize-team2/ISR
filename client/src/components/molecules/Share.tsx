@@ -27,7 +27,6 @@ const Ul = styled.ul`
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 885px;
 
   li {
     padding: 1rem;

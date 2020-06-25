@@ -7,6 +7,7 @@ type ImageBoxType = {
   loading: boolean;
   src: string;
   title: string;
+  color?: string;
 };
 
 const MainContainer = styled.div`
@@ -30,6 +31,16 @@ const SubContainer = styled.div`
   height: 420px;
   width: 420px;
 
+  @media (max-width: 430px) {
+    height: 350px;
+    width: 350px;
+
+    img {
+      height: 350px;
+      width: 350px;
+    }
+  }
+
   .loading {
     opacity: 0.6;
     margin-top: 200px;
@@ -41,10 +52,10 @@ const Loader = styled(ClipLoader)`
   color: ${theme.color.primary.White};
 `;
 
-const ImageBox: FC<ImageBoxType> = ({ loading, src, title }) => {
+const ImageBox: FC<ImageBoxType> = ({ loading, src, title, color = '#FFFFFF' }) => {
   return (
     <MainContainer>
-      <p>{title}</p>
+      <p style={{ color }}>{title}</p>
       <SubContainer>
         {loading ? (
           <div className="loading">

@@ -27,7 +27,7 @@ const MainContainer = styled.div`
   background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
-  padding: 120px 260px 0px 260px;
+  padding: 120px 360px 0px 360px;
 
   h1 {
     margin: 20px 60px;
@@ -59,6 +59,41 @@ const MainContainer = styled.div`
     line-height: 28px;
     text-align: center;
   }
+
+  @media (max-width: 1440px) {
+    padding: 120px 145px 0px 145px;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 120px 50px 0px 50px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 800px;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 120px 10px 0px 10px;
+    max-width: 400px;
+    h1 {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    h2 {
+      font-size: 17px;
+      line-height: 23px;
+    }
+  }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 42px;
+      line-height: 51px;
+    }
+  }
 `;
 
 const ContentContaienr = styled.div`
@@ -81,6 +116,10 @@ const QuoteContainer = styled.div`
   h3 {
     color: ${theme.color.primary.White};
     opacity: 0.6;
+  }
+
+  @media (max-width: 600px) {
+    padding: 60px 40px 20px 40px;
   }
 `;
 

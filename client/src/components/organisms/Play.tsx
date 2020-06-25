@@ -53,6 +53,20 @@ const FilterContainer = styled.div`
   padding: 30px 60px 30px 60px;
   width: 840px;
 
+  @media (max-width: 850px) {
+    width: 640px;
+  }
+
+  @media (max-width: 680px) {
+    width: 550px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  @media (max-width: 550px) {
+    width: 370px;
+    padding: 30px 10px 30px 10px;
+  }
+
   div {
     font-weight: bold;
     font-size: 16px;
@@ -82,19 +96,13 @@ const ResultContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 840px;
-  height: 448px;
   font-weight: bold;
+  flex-wrap: wrap;
 
   div {
     display: inline-block;
     flex-wrap: wrap;
     margin: 5px;
-  }
-
-  img {
-    height: 410px;
-    width: 410px;
   }
 `;
 
@@ -202,7 +210,12 @@ const Play: FC<PlayType> = ({ title, content }) => {
       </Button>
       <ResultContainer>
         <ImageBox title="original image" src={originalSrc} loading={loading} />
-        <ImageBox title="enhanced image" src={enhancedUrlSrc} loading={loading} />
+        <ImageBox
+          color={theme.color.primary.LightViolet}
+          title="enhanced image"
+          src={enhancedUrlSrc}
+          loading={loading}
+        />
       </ResultContainer>
       <a href={enhancedUrl === '' ? '#' : enhancedUrl} download>
         <Button

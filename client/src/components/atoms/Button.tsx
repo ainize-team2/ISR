@@ -7,7 +7,7 @@ const DefaultButton = styled.button`
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 50px;
+  line-height: 32px;
   width: 160px;
   height: 50px;
   left: 36px;
@@ -23,6 +23,7 @@ const DefaultButton = styled.button`
 
   img {
     margin-right: 10px;
+    transform: translateY(10%);
   }
   &:hover {
     background: ${theme.color.primary.Violet};

@@ -10,10 +10,25 @@ const MainContainer = styled.div`
   max-width: 1550px;
 
   @media (max-width: 1440px) {
-    max-width: 1300px;
+    max-width: 1100px;
   }
-  @media (max-width: 1300px) {
-    max-width: 1244px;
+
+  @media (max-width: 1200px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 800px;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 `;
 

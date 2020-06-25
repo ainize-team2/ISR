@@ -39,6 +39,56 @@ const MainContainer = styled.div`
     mix-blend-mode: normal;
     opacity: 0.6;
   }
+  .ainizeButton {
+    width: 240px;
+  }
+  .stackoverButton {
+    margin-left: 10px;
+    width: 252px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 80px 100px 0px 100px;
+  }
+
+  @media (max-width: 800px) {
+    padding: 50px 70px 0px 70px;
+    .stackoverButton {
+      margin-left: 0px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 15px 70px 0px 70px;
+    .stackoverButton {
+      font-size: 14px;
+      line-height: 49px;
+      width: 202px;
+    }
+    .ainizeButton {
+      font-size: 14px;
+      line-height: 49px;
+      width: 202px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 15px 30px 0px 30px;
+    h1 {
+      margin-top: 0px;
+      margin-buttom: 0px;
+    }
+    height: auto;
+  }
 `;
 
 const AboutAinize: FC<AboutAinizeType> = ({ title, contents }) => {
@@ -49,12 +99,12 @@ const AboutAinize: FC<AboutAinizeType> = ({ title, contents }) => {
         return <h2>{content}</h2>;
       })}
       <a target="_blank" rel="noopener noreferrer" href={constants.AINIZE_MAIN_URL}>
-        <Button style={{ width: '252px' }} onClick={onClickAinizeLink}>
+        <Button className="ainizeButton" onClick={onClickAinizeLink}>
           <img className="svg" src={AinizeIcon} alt="AinizeIcon" /> Visit Ainize Website
         </Button>
       </a>
       <a target="_blank" rel="noopener noreferrer" href={constants.STACKOVERFLOW_URL}>
-        <Button style={{ marginLeft: '10px', width: '252px' }} onClick={onClickStackLink}>
+        <Button className="stackoverButton" onClick={onClickStackLink}>
           <img className="svg" src={StackIcon} alt="StackOverflow" />
           Ask on Stack Overflow
         </Button>

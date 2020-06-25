@@ -25,7 +25,16 @@ const Ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  width: 885px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 430px) {
+    width: 350px;
+
+    img {
+      width: 350px;
+    }
+  }
+
   li {
     padding: 1rem;
     flex: 0 0;
