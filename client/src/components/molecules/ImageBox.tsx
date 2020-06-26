@@ -30,20 +30,22 @@ const SubContainer = styled.div`
   background-color: rgba(26, 27, 31, 0.2);
   height: 420px;
   width: 420px;
-
+  .imageBox {
+    width: 100%;
+    height: 100%;
+  }
   @media (max-width: 430px) {
     height: 350px;
     width: 350px;
-
-    img {
-      height: 350px;
-      width: 350px;
-    }
   }
 
   .loading {
     opacity: 0.6;
     margin-top: 200px;
+  }
+  p {
+    display: inline-block;
+    transform: translateY(-26%);
   }
 `;
 
@@ -60,10 +62,10 @@ const ImageBox: FC<ImageBoxType> = ({ loading, src, title, color = '#FFFFFF' }) 
         {loading ? (
           <div className="loading">
             <Loader size={16} loading={loading} />
-            loading...
+            <p>loading...</p>
           </div>
         ) : (
-          <img src={src} alt="ImageBox" />
+          <img className="imageBox" src={src} alt="ImageBox" />
         )}
       </SubContainer>
     </MainContainer>

@@ -44,6 +44,7 @@ ADD ./client/src ./src
 ADD ./client/tsconfig.json ./tsconfig.json
 RUN npm run build
 
+
 WORKDIR $TENSOR_HOME
 ENV PYTHONPATH ./ISR/:$PYTHONPATH
 COPY ISR ./ISR
