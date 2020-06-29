@@ -10,7 +10,6 @@ const MainContainer = styled.div`
   line-height: 28px;
   color: ${theme.color.primary.LightViolet};
 
-  width: 300px;
   label {
     width: 100%;
     display: inline-block;
@@ -30,6 +29,10 @@ const MainContainer = styled.div`
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+  div {
+    display: inline-block;
+    flex-wrap: wrap;
+  }
 `;
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -45,7 +48,7 @@ const FileButton: FC<InputProps> = ({ name, id, selectFile, ...restProps }) => {
         <label htmlFor={id}>{name}</label>
       </Button>
       <input type="file" id={id} {...restProps} />
-      {selectFile && selectFile[0] ? selectFile[0].name : ''}
+      <div>{selectFile && selectFile[0] ? selectFile[0].name : ''}</div>
     </MainContainer>
   );
 };
