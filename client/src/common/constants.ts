@@ -6,5 +6,5 @@ export const STACKOVERFLOW_URL = 'https://stackoverflow.com/questions/tagged/ain
 export const AINIZE_THIS_URL = 'https://ainize.ai/ehdgus8077/isr';
 
 // Google Analytics
-export const TRACKING_ID = '';
+export const TRACKING_ID = 'UA-164242824-16';
 export const GA_FLAG = true;

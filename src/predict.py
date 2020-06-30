@@ -12,6 +12,8 @@ def predict(images):
     img = Image.open(images)
     img = img.convert('RGB')
     lr_img = np.array(img)
+    if (lr_img.shape[0] > 1280 or lr_img.shape[1] > 1280):
+      raise ValueError('Invalid Image Size: width or height < 1280')
     sr_img = model.predict(lr_img)
     output = Image.fromarray(sr_img)
     output_file_path = IMAGE_PATH + getRandomStr(15) + '.jpg'

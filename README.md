@@ -1,3 +1,5 @@
+[![Run on Ainize](https://www.ainize.ai/static/images/run_on_ainize_button.svg)](https://ainize.web.app/redirect?git_repo=github.com/idealo/image-super-resolution)
+
 # ISR
 This Project is to improve image quality.
 
@@ -22,3 +24,6 @@ python3 ./src/server.py
 sudo docker build -t {Docker Path}:{Tag} .
 sudo docker run -p {Expose Port}:80 {Docker Path}:{Tag}
 ```
+
+## References
+* https://github.com/idealo/image-super-resolution
