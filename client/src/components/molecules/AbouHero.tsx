@@ -133,7 +133,7 @@ const AboutHero: FC<AboutHeroType> = ({ title, subTitle, quote, name, userInfo }
           target="_blank"
           onClick={onClickGithubLink}
           rel="noopener noreferrer"
-          href={constants.AINIZE_THIS_URL}
+          href={constants.GITHUB_URL}
         >
           <Button style={{ margin: '40px' }}>
             <img className="svg" src={GithubIcon} alt="GitHubIcon" />

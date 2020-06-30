@@ -43,7 +43,7 @@ export default function Home(): React.ReactElement {
         userInfo="open source developer / author of Crowdy project"
       />
       <AboutRepo
-        title="What is ISR"
+        title="What is ISR (Image Super-Resolution)"
         contents={[
           'Polytunes is an interactive music pad that aims at creating a new kind of melodies by collaborating without speaking to other players. The project was initially developed by Clement Bourgoin and was submitted to the 2015 Meteor global Distributed Hackathon.',
           'Polytunes makes music only using a Javascript library called Wad, a wrapper around HTML5 WebAudio API, without utilizing flash or sound files.',

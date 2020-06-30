@@ -43,7 +43,7 @@ const Share: FC = () => {
   const IMAGE_PATH_LIST = [
     {
       imagePath: twitterIcon,
-      url: `https://twitter.com/home?status=${document.URL}`,
+      url: `http://twitter.com/share?&url=${document.URL}`,
       alt: 'twitterIcon',
     },
     {
