@@ -14,7 +14,7 @@ The goal of this project is to upscale and improve the quality of low resolution
 
 ## ML Model
 
-RRDN model, trained with Adversarial and VGG features losses, choose the option weights='gans' when creating a RRDN model.
+trained with Adversarial and VGG features losses, choose the option weights='gans' when creating a RRDN model.
 
 ### RRDN Network architecture
 The main parameters of the architecture structure are:

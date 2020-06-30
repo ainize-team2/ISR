@@ -28,11 +28,12 @@ const SubContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgba(26, 27, 31, 0.2);
-  height: 420px;
+  height: auto;
   width: 420px;
   .imageBox {
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   @media (max-width: 430px) {
     height: 350px;
@@ -41,7 +42,8 @@ const SubContainer = styled.div`
 
   .loading {
     opacity: 0.6;
-    margin-top: 200px;
+    height: 350px;
+    padding-top: 35%;
   }
   p {
     display: inline-block;
@@ -58,7 +60,7 @@ const ImageBox: FC<ImageBoxType> = ({ loading, src, title, color = '#FFFFFF' }) 
   return (
     <MainContainer>
       <p style={{ color }}>{title}</p>
-      <SubContainer>
+      <SubContainer style={{ display: 'flex' }}>
         {loading ? (
           <div className="loading">
             <Loader size={16} loading={loading} />

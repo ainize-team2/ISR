@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styled from 'styled-components';
 import theme from 'theme';
 import twitterIcon from '../../assets/images/icon_twitter.svg';
@@ -39,7 +39,25 @@ const Ul = styled.ul`
     outline: 0;
   }
 `;
+
+const CopiedContainer = styled.div`
+  position: fixed;
+  width: 190px;
+  height: 50px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgba(65, 221, 146, 0.6);
+  color: ${theme.color.primary.White};
+  bottom: 10px;
+  left: 10px;
+  border: 1px solid rgba(102, 186, 255, 0.4);
+  box-shadow: 0px 0px 20px 10px rgba(102, 186, 255, 0.2);
+  border-radius: 7px;
+`;
+
 const Share: FC = () => {
+  const [copied, setcCopied] = useState<boolean>(false);
+
   const IMAGE_PATH_LIST = [
     {
       imagePath: twitterIcon,
@@ -60,6 +78,11 @@ const Share: FC = () => {
     elem.select();
     document.execCommand('copy');
     document.body.removeChild(elem);
+    setcCopied(true);
+
+    setTimeout(() => {
+      setcCopied(false);
+    }, 2000);
   };
 
   return (
@@ -81,6 +104,7 @@ const Share: FC = () => {
           );
         })}
       </Ul>
+      {copied ? <CopiedContainer>Copied!</CopiedContainer> : ''}
     </MainConatiner>
   );
 };
