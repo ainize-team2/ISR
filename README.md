@@ -24,3 +24,6 @@ python3 ./src/server.py
 sudo docker build -t {Docker Path}:{Tag} .
 sudo docker run -p {Expose Port}:80 {Docker Path}:{Tag}
 ```
+
+## References
+* https://github.com/idealo/image-super-resolution
