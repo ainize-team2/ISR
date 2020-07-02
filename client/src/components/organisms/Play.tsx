@@ -196,7 +196,7 @@ const Play: FC<PlayType> = ({ title, content }) => {
             }}
           />
         )}
-        <h3>Size of image file should be less than 5MB. We do NOT store your uploaded image.</h3>
+        <h3>Size of image file should be less than 5MB. Uploaded images are not stored.</h3>
       </FilterContainer>
       <Button
         style={{ width: '120px', height: '64px', fontSize: '16px' }}

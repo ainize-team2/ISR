@@ -37,18 +37,17 @@ export default function Home(): React.ReactElement {
     <MainContainer>
       <AboutHero
         title="Join Project Reinvent to improve ISR"
-        subTitle="Project Reinvent is an initiative to bring new life to forgotten open-source projects. We added new designs and features to Polytunes and are now waiting for more contributions."
-        quote="“ To have another team, from another part of the world, build new features for my project is something really heartwarming to see.”"
-        name="Andrew Lim"
-        userInfo="open source developer / author of Crowdy project"
+        subTitle="Open Resource initiative is about converting text-based open source projects into live services. Without managing their own server, anyone can contribute and improve the project as well as its service on this website. Let’s improve this project together."
+        quote='"Seeing a new version of my project, developed further by someone else was such a unique experience."'
+        name="iamchanii"
+        userInfo="open source developer / author of Can I fish project"
       />
       <AboutRepo
         title="What is ISR (Image Super-Resolution)"
         contents={[
-          'Polytunes is an interactive music pad that aims at creating a new kind of melodies by collaborating without speaking to other players. The project was initially developed by Clement Bourgoin and was submitted to the 2015 Meteor global Distributed Hackathon.',
-          'Polytunes makes music only using a Javascript library called Wad, a wrapper around HTML5 WebAudio API, without utilizing flash or sound files.',
+          'Image Super-Resolution project is an open-source project to upscale and improve the quality of low-resolution images, using deep learning models such as Residual Dense Network(RDN) and Residual Restructured Dense Network(RRDN).',
+          'This endpoint provides the most recent and powerful model: RRDN, trained with Adversarial and VGG features losses.',
         ]}
-        end="Find more information about the original version of ISR"
       />
       <AboutAinize
         title="What is Ainize"
