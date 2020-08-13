@@ -1,7 +1,11 @@
 openapi: 3.0.0
-info: 
+info:
   title: ISR (Image Super Resolution)
   version: 1.0.0
+  description: "## The goal of this project is to upscale and improve the quality of low resolution images."
+  contact:
+    name: API Support (Feature Request, Report Issue)
+    url: 'https://github.com/ainize-team2/ISR'
 
 servers: 
   - url: https://rrdn-ehdgus8077.endpoint.ainize.ai
@@ -9,12 +13,17 @@ servers:
 paths:
   /healthz:
     get:
+      tags:
+        - Health
       summary: API For health checking.
       responses:
         '200':
           description: OK
   /predict/url:
     post:
+      tags:
+        - Improve the quality of images
+      summary: Improve the quality of low resolution images using image link.
       description: "[Sample Photo Download Link](https://w.namu.la/s/e65f62b18fa399f9442664492eab7c7cbe749977907d495155df0e65afa394f3d762d5f378f4a8d4d9275b7b6af292f599f84ab5b9431694bfeac1eac348b213a74616f659b7442d63585a25fd3433f1018f9aaad21e90004da1dd9847ddf5c7b1f52a1954f4f6b0a2d4e2b0f9dfa78e)"
       requestBody:
         content:
@@ -28,9 +37,12 @@ paths:
                     - url  
       responses:
         '200': 
-          description: ML Result
+          description: Converted image
   /predict/file:
     post:
+      tags:
+        - Improve the quality of images
+      summary: Improve the quality of low resolution images using image file.
       requestBody:
         content:
           multipart/form-data:
@@ -42,4 +54,5 @@ paths:
                   format: binary
       responses:
         '200':
-          description: ML Result
+          description: Converted image
+
